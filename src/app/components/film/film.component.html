@@ -3,12 +3,13 @@
     <img class="img-film" src="assets/img/StarW.jpg" alt="" />
 
     <div class="information-film">
-      <h2 class="mt-2">MEGAN</h2>
-      <span class="mt-2 text-primary">25/12/1999</span>
+      <h2 class="mt-2">{{ film.title }}</h2>
+      <span class="mt-2 text-primary">{{
+        film.created | date : "dd/MM/yyyy"
+      }}</span>
       <h3 class="mt-3">Sinopsis</h3>
       <p class="mt-2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam vero
-        omnis doloremque nesciunt tempore vitae!
+        {{ film.opening_crawl }}
       </p>
       <button class="btn btn-primary">Ver Actores</button>
     </div>

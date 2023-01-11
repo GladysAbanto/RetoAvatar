@@ -1,10 +1,6 @@
 <div class="container">
   <h1 class="text-primary">PELICULAS</h1>
-  <div class="d-flex flex-column gap-4">
-    <app-film></app-film>
-    <app-film></app-film>
-    <app-film></app-film>
-    <app-film></app-film>
-    <app-film></app-film>
+  <div class="d-flex flex-column gap-4" *ngIf="films">
+    <app-film *ngFor="let result of films.results" [film]="result"></app-film>
   </div>
 </div>
