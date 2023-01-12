@@ -2,3 +2,8 @@
   height: 120px;
   width: 100px;
 }
+.container-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

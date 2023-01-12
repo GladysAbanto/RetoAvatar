@@ -1,16 +1,16 @@
 <div class="container-modal p-2">
-  <div class="d-flex gap-3">
+  <div class="d-flex gap-3" *ngFor="let character of characters">
     <img class="img-modal-character" src="assets/img/personaje.jpg" alt="" />
     <div class="d-flex flex-column w-100">
-      <h2>GladysAbanto</h2>
+      <h3>{{ character.name }}</h3>
       <div class="row bg-ligth">
         <div class="col">
           <h5>Altura</h5>
-          <span>1.56</span>
+          <span>{{ character.height }} cm</span>
         </div>
         <div class="col">
           <h5>Masa</h5>
-          <span>56.5</span>
+          <span>{{ character.mass }} kg</span>
         </div>
         <div class="col">
           <button class="btn btn-primary">Ver más</button>
