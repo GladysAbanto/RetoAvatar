@@ -12,6 +12,10 @@ const routes: Routes = [
     path: 'characters/:id',
     component: CharactersComponent,
   },
+  {
+    path: '**',
+    redirectTo: '/films',
+  },
 ];
 
 @NgModule({
