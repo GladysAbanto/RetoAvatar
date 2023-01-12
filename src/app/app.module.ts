@@ -7,6 +7,8 @@ import { CharactersComponent } from './pages/characters/characters.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FilmComponent } from './components/film/film.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalCharactersComponent } from './components/modal-characters/modal-characters.component';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -14,8 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
     FilmsComponent,
     CharactersComponent,
     FilmComponent,
+    ModalCharactersComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgbModalModule],
   providers: [],
   bootstrap: [AppComponent],
 })

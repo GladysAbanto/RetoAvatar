@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Result } from 'src/app/models/films.models';
+import { ModalCharactersComponent } from '../modal-characters/modal-characters.component';
 
 @Component({
   selector: 'app-film',
@@ -8,7 +10,10 @@ import { Result } from 'src/app/models/films.models';
 })
 export class FilmComponent implements OnInit {
   @Input() film!: Result;
-  constructor() {}
+  constructor(private modal: NgbModal) {}
 
   ngOnInit(): void {}
+  openModal() {
+    this.modal.open(ModalCharactersComponent);
+  }
 }
