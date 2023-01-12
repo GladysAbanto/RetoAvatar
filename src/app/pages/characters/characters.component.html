@@ -1,23 +1,22 @@
 <div class="container p-5">
-  <div class="row">
+  <div class="row" *ngIf="character">
     <img class="img-characters" src="assets/img/personaje.jpg" alt="" />
-    <h2 class="text-center my-4 text-primary">Gladys</h2>
+    <h2 class="text-center my-4 text-primary">{{ character.name }}</h2>
     <div class="row text-center bg-light py-2">
       <div class="col">
         <h4>Altura</h4>
-        <span>1.60 cm</span>
+        <span>{{ character.height }} cm</span>
       </div>
       <div class="col">
         <h4>Masa</h4>
-        <span>80 kg</span>
+        <span>{{ character.mass }}kg</span>
       </div>
     </div>
   </div>
   <div class="row text-center">
     <h3 class="my-4">Películas en las que participó</h3>
     <ul>
-      <li>Peli 1</li>
-      <li>Peli 2</li>
+      <li *ngFor="let film of films">{{ film.title }}</li>
     </ul>
   </div>
 </div>

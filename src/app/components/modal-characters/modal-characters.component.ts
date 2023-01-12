@@ -9,7 +9,12 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class ModalCharactersComponent implements OnInit {
   @Input() characters!: Character[];
+
   constructor(public activeModal: NgbActiveModal) {}
 
   ngOnInit(): void {}
+  viewMore(url: string) {
+    const urlSplit = url.split('/');
+    return urlSplit[urlSplit.length - 2];
+  }
 }
