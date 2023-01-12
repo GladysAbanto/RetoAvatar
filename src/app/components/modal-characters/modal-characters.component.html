@@ -13,7 +13,13 @@
           <span>{{ character.mass }} kg</span>
         </div>
         <div class="col">
-          <button class="btn btn-primary">Ver más</button>
+          <button
+            class="btn btn-primary"
+            [routerLink]="['/characters']"
+            (click)="activeModal.close()"
+          >
+            Ver más
+          </button>
         </div>
       </div>
     </div>

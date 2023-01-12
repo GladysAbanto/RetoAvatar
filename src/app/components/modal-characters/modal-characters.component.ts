@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Character } from 'src/app/models/character.model';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-modal-characters',
@@ -8,7 +9,7 @@ import { Character } from 'src/app/models/character.model';
 })
 export class ModalCharactersComponent implements OnInit {
   @Input() characters!: Character[];
-  constructor() {}
+  constructor(public activeModal: NgbActiveModal) {}
 
   ngOnInit(): void {}
 }
